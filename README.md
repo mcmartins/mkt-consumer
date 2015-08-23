@@ -1,4 +1,7 @@
 # MKT Consumer
+
+## http://mkt-server.cloudapp.net:3002/mkt/api/v1/messages
+
 Message Consumer. Exposes an endpoint which consumes trade messages.
 
 The endpoint is: http://mkt-server.cloudapp.net:3000/api/v1/messages
