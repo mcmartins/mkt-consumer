@@ -10,7 +10,7 @@ Node.js is a good solution for handling these requests as it only routes the mes
 
 BeeQueue is used as it is a lightweight and performant queue implementation for Node.js. [Ref 2](https://github.com/LewisJEllis/bee-queue)
 
-Redis is holding the Queue and ensuring messages are stored in case of system failure. Redis Sentinel could be used in order to ensure HA. Note that no tunning configurations were implemented [Ref 3](http://shokunin.co/blog/2014/11/11/operational_redis.html)
+Redis is holding the Queue and ensuring messages are stored in case of system failure. Redis Sentinel could be used in order to ensure HA. Note that no tunning configurations were implemented. [Ref 3](http://shokunin.co/blog/2014/11/11/operational_redis.html)
 
 **NOTE:** The endpoint is open and no authentication is required (I didn't want to mess with the system you have to test it). In a productive environment the api should be provided over https and should require authentication.
 
