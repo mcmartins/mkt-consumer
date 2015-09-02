@@ -16,7 +16,7 @@ Redis is holding the Job Queue and ensuring messages are stored in case of syste
 
 ## API
 
-The API follows a REST approach and could be extended to support other features like - get a specific message, delete a specific message, get user messages, etc.
+The API follows a REST approach and could be extended to support other features like - get a specific message, delete a specific message, get user messages, etc. Versioning is also used to explicitly identify the API version.
 
 URL:
 
