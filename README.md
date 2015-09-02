@@ -40,3 +40,9 @@ Response:
 ```bash
 {"status": "BUSY", "message": "Ups :( We're sorry, it seems the server is toobusy right now...please try again later..."}
 ```
+
+## Run
+
+```bash
+node mkt-consumer/index.js
+```
