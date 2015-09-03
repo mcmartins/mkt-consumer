@@ -40,8 +40,14 @@ In case of server overload, the server fails gracefully by returning HTTP 503:
 
 ## Run
 
+Windows:
 ```bash
-node MKT_CONFIG_FILE="/path/to/config.json" mkt-consumer/index.js
+set MKT_CONFIG_FILE=\path\to\config.json&&node index.js
+```
+
+Linux:
+```bash
+export MKT_CONFIG_FILE="/path/to/config.json";node mkt-consumer/index.js
 ```
 
 ## Configurations
