@@ -36,7 +36,6 @@ Response:
 
 In case of server overload, the server fails gracefully by returning HTTP 503:
 
-Response:
 ```bash
 {"status": "BUSY", "message": "Ups :( We're sorry, it seems the server is toobusy right now...please try again later..."}
 ```
