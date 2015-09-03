@@ -2,9 +2,7 @@
 
 ## Intro
 
-Message Consumer. Exposes an endpoint which consumes trade messages.
-
-This module handles messages by sending them to a Job Queue backed by Redis. These messages are later processed by another module [mkt-processor](https://github.com/mcmartins/mkt-processor).
+Exposes an endpoint which consumes trade messages. This module handles messages by sending them to a Job Queue backed by Redis. These messages are later processed by another module [mkt-processor](https://github.com/mcmartins/mkt-processor).
 
 Node.js is a good solution for handling these requests as it only routes the messages to Redis Queue. Plus, building a webserver in Node.js takes really few line codes. In terms of maturity and performance, Node.js is a good solution. [Ref 1](http://www.hostingadvice.com/blog/nodejs-vs-golang/)
 
@@ -43,5 +41,9 @@ In case of server overload, the server fails gracefully by returning HTTP 503:
 ## Run
 
 ```bash
-node mkt-consumer/index.js
+node MKT_CONFIG_FILE="/path/to/config.json" mkt-consumer/index.js
 ```
+
+## Configurations
+
+The configurations file is shared among all the projects and is located in the [mkt-portal](https://github.com/mcmartins/mkt-portal) | [config.json](https://github.com/mcmartins/mkt-portal/blob/master/config.json)
