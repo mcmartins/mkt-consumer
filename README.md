@@ -4,13 +4,16 @@
 
 Exposes an endpoint which consumes trade messages. This module handles messages by sending them to a Job Queue backed by Redis. These messages are later processed by another module [mkt-processor](https://github.com/mcmartins/mkt-processor).
 
-Node.js is a good solution for handling these requests as it only routes the messages to Redis Queue. Plus, building a webserver in Node.js takes really few line codes. In terms of maturity and performance, Node.js is becoming mature and beeing used more and more by big companies. [Ref 1](http://www.hostingadvice.com/blog/nodejs-vs-golang/)
+Node.js is a good solution for handling these requests as it only routes the messages to Redis Queue. Plus, building a webserver in Node.js takes really few line codes. In terms of maturity and performance, Node.js is becoming mature and beeing used more and more by big companies. [Ref 1](http://www.hostingadvice.com/blog/nodejs-vs-golang/)<br/>
+Building large applications with Node.js could be a challenge. 
 
 BeeQueue is used as it is a lightweight and performant Job Queue implementation for Node.js. [Ref 2](https://github.com/LewisJEllis/bee-queue)
 
 Redis is holding the Job Queue and ensuring messages are stored in case of system failure. Redis Sentinel could be used in order to ensure HA. Note that no tunning configurations were implemented so the performance can increase using some tweaks. [Ref 3](http://shokunin.co/blog/2014/11/11/operational_redis.html)
 
-**NOTE:** The endpoint is open and no authentication is required (I didn't want to mess with the system you have to test it). In a productive environment the API should be provided over https and should require authentication.
+Scalability could be achieved by installing NGINX to load-balancing this module. [Ref 4](http://anandmanisankar.com/posts/docker-container-nginx-node-redis-example/)
+
+The endpoint is open and no authentication is required (I didn't want to mess with the system you have to test it). In a productive environment the API should be provided over https and should require authentication.
 
 ## API
 
