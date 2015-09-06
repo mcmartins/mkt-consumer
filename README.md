@@ -9,15 +9,15 @@ Building large applications with Node.js could be a challenge.
 
 BeeQueue is used as it is a lightweight and performant Job Queue implementation for Node.js. [Ref 2](https://github.com/LewisJEllis/bee-queue)
 
-Redis is holding the Job Queue and ensuring messages are stored in case of system failure. Redis Sentinel could be used in order to ensure HA. Note that no tunning configurations were implemented so the performance can increase using some tweaks. [Ref 3](http://shokunin.co/blog/2014/11/11/operational_redis.html)
+Redis is holding the Job Queue and ensuring messages are stored in case of system failure. Redis Sentinel could be used in order to ensure HA. [Ref 3](http://redis.io/topics/sentinel) Note that no tunning configurations were implemented so the performance can increase using some tweaks. [Ref 4](http://shokunin.co/blog/2014/11/11/operational_redis.html)
 
-Scalability could be achieved by installing NGINX to load-balancing this module. [Ref 4](http://anandmanisankar.com/posts/docker-container-nginx-node-redis-example/)
+Scalability could be achieved by installing NGINX to load-balancing this module. [Ref 5](http://anandmanisankar.com/posts/docker-container-nginx-node-redis-example/)
 
 The endpoint is open and no authentication is required (I didn't want to mess with the system you have to test it). In a productive environment the API should be provided over https and should require authentication.
 
 ## API
 
-The API follows a REST approach and could be extended to support other features like - get a specific message, delete a specific message, get user messages, etc. Versioning is also used to explicitly identify the API version. [Ref 4](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+The API follows a REST approach and could be extended to support other features like - get a specific message, delete a specific message, get user messages, etc. Versioning is also used to explicitly identify the API version. [Ref 6](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
 URL:
 
