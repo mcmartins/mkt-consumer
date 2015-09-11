@@ -1,5 +1,7 @@
 # MKT Consumer
 
+Currency Fair Achitecture Task
+
 ## Intro
 
 Exposes an endpoint which consumes trade messages. This module handles messages by sending them to a Job Queue backed by Redis. These messages are later processed by another module [mkt-processor](https://github.com/mcmartins/mkt-processor). This modularity approach has alot of advantages starting from the separation of concerns, code maintenance, reusability, etc.
